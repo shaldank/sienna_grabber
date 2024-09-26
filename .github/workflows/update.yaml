@@ -17,7 +17,7 @@ concurrency:
 jobs:
   update_siennas:
     name: "Update"
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     env:
       MODEL: sienna
       ZIPCODE: ${{ vars.ZIPCODE }}
