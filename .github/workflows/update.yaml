@@ -20,8 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     env:
       MODEL: sienna
-      ZIPCODE: ${{ vars.ZIPCODE }}
-      DISTANCE: ${{ vars.DISTANCE }}
+      ZIPCODE: 95123
+      DISTANCE: 100
     steps:
       - name: Clone repo
         uses: actions/checkout@v4
@@ -62,7 +62,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: "output"
-          path: "output/${{ env.MODEL }}*"
+          path: "output/sienna"
 
   commit_changes:
     name: "Commit changes"
